@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context=".ui.ProductoActivity">
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Identificador del producto"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textInputId"
+        app:textAllCaps="false" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="ID"
+        app:layout_constraintTop_toBottomOf="@+id/textId"
+        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="none"
+        android:focusable="false"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aqui va el texto de título"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/textInputId"
+        app:layout_constraintStart_toStartOf="parent"
+        app:textAllCaps="true" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="10dp"
+        android:contentDescription="Imagen de la prenda"
+        android:src="@drawable/chaqueta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTitle" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descripción"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:hint="descripción"
+        app:layout_constraintTop_toBottomOf="@id/textDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="none"
+        android:focusable="false"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textCategoria"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Categoría"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/textInputDescripcion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:textAllCaps="false" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Categoría"
+        app:layout_constraintTop_toBottomOf="@+id/textCategoria"
+        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="none"
+        android:focusable="false"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textPrecio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Precio"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/textInputCategoria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:textAllCaps="false" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputPrecio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Precio"
+        app:layout_constraintTop_toBottomOf="@+id/textPrecio"
+        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="none"
+        android:focusable="false"/>
+
+    <Button
+        android:id="@+id/ButtonOk"
+        style="@style/Widget.Material3.Button.Icon"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="OK"
+        app:icon="@drawable/baseline_check_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputPrecio" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
