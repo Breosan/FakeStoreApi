@@ -28,10 +28,9 @@ class ProductoActivity : AppCompatActivity() {
         super.onStart()
         val id = intent.getStringExtra("id")
         if (id != null) {
-            Toast.makeText(this, "El id es: $id", Toast.LENGTH_SHORT).show()
             getProducto(id)
         } else {
-            Toast.makeText(this, "No se encuntra el producto", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "No se encuentra el producto", Toast.LENGTH_SHORT).show()
         }
 
     }

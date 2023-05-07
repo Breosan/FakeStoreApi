@@ -48,7 +48,7 @@
     <ImageView
         android:id="@+id/image"
         android:layout_width="wrap_content"
-        android:layout_height="150dp"
+        android:layout_height="200dp"
         android:scaleType="fitCenter"
         android:layout_marginTop="10dp"
         android:contentDescription="Imagen de la prenda"
@@ -73,6 +73,8 @@
         android:id="@+id/textInputDescripcion"
         android:layout_width="match_parent"
         android:layout_height="150dp"
+        android:gravity="top"
+        android:justificationMode="inter_word"
         android:hint="descripción"
         app:layout_constraintTop_toBottomOf="@id/textDescription"
         app:layout_constraintStart_toStartOf="parent"
